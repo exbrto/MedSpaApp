@@ -5,6 +5,7 @@ body{
     background-position: top;
     padding: 4vh 15%;
     font-family: 'Libre Franklin', 'Helvetica', sans-serif;
+    min-height: 95vh;
 }
 .parentSection{
     display: flex;
@@ -71,4 +72,18 @@ ol {
     .5px -.5px 0 #000,
     -.5px .5px 0 #000,
     .5px -.5px 0 #000;
+}
+@media (max-width: 630px){
+    h1{
+        font-size: 1.8rem;
+    }
+    h2, h2 {
+        font-size: 1.4rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    ol{
+        font-size: 1.2rem;
+    }
 }
