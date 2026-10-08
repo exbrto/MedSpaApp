@@ -14,8 +14,8 @@ This app chains two APIs together:
 
 1. The user enters their **city or location**.
 2. **Nominatim (OpenStreetMap)** turns that location into latitude and longitude.
-3. Those coordinates are sent to **Open-Meteo**, which returns the daily maximum UV index for the next 7 days.
-4. The forecast is displayed on the page day by day, so clients can see which days carry the highest sun risk.
+3. Those coordinates are sent to **Open-Meteo**, which returns the daily maximum UV index.
+4. The UV index is displayed so clients can see which days carry the highest sun risk.
 
 ## How It's Made
 
@@ -24,5 +24,3 @@ This app chains two APIs together:
 **APIs:**
 - [Nominatim](https://nominatim.org/): converts a place name to coordinates (no API key needed)
 - [Open-Meteo](https://open-meteo.com/): provides the 7-day UV index forecast for those coordinates (no API key needed)
-
-The page is built with HTML and styled with CSS. JavaScript uses `fetch()` to send the user's location to Nominatim, pulls the latitude and longitude out of the first result, and uses them to build a second request to Open-Meteo. The UV forecast that comes back is displayed in the DOM.
